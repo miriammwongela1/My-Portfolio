@@ -24,7 +24,7 @@ export default function About() {
   }, []);
 
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <div className={styles.aboutContainer}>
         
         {/* Photo side */}

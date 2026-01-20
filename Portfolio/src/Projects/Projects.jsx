@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
 import javaIcon from "../assets/java.png";
@@ -25,6 +25,28 @@ import { Link } from "react-router-dom";
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("projects");
+
+  // Listen for hash changes to update active tab
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.toLowerCase();
+      
+      if (hash.includes("skills")) {
+        setActiveTab("skills");
+      } else if (hash.includes("certificates")) {
+        setActiveTab("certificates");
+      } else {
+        setActiveTab("projects");
+      }
+    };
+
+    // Check initial hash on mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   const skillIcons = [
     { name: "Java", icon: javaIcon },
@@ -92,7 +114,11 @@ export default function Projects() {
             <motion.button
               key={tab}
               className={`${styles.tabBtn} ${activeTab === tab ? styles.active : ""}`}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => {
+                setActiveTab(tab);
+                // Update the URL hash when clicking tab buttons
+                window.location.hash = tab === "projects" ? "#projects" : `#${tab}`;
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -151,6 +177,7 @@ export default function Projects() {
         {/* Skills Tab */}
         <motion.div
           key="skills"
+          id="skills"
           variants={tabVariants}
           initial="hidden"
           animate={activeTab === "skills" ? "visible" : "hidden"}

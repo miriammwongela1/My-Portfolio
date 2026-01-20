@@ -19,13 +19,16 @@ export default function Header() {
       {/* Navigation */}
       <nav className={styles.navbar}>
         <Link to="/" className={styles.logoLink}>
-          <motion.h1 
-            className={styles.logo}
+          <motion.div 
+            className={styles.logoContainer}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Miriam<span>Dev</span>
-          </motion.h1>
+            <img src="/logo.png" alt="Logo" className={styles.logoImg} />
+            <h1 className={styles.logo}>
+              Miriam<span>Dev</span>
+            </h1>
+          </motion.div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -34,7 +37,7 @@ export default function Header() {
               <HashLink
                  key={item.label}
                  smooth
-                 to={`/${item.href}`}   // ensures it works from /swms too
+                 to={item.href}
                  className={styles.navLink}
                  onClick={() => setMenuOpen(false)}
       >
@@ -74,7 +77,7 @@ export default function Header() {
       <HashLink
         key={item.label}
         smooth
-        to={`/${item.href}`}
+        to={item.href}
         className={styles.navLink}
         onClick={() => setMenuOpen(false)}
       >

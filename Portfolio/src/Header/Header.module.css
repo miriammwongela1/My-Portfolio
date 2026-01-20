@@ -27,9 +27,9 @@
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin: 0;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -40,6 +40,25 @@
   color: #fff;
   display: flex;
   align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoImg {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logoImg:hover {
+  filter: drop-shadow(0 0 8px rgba(5, 236, 148, 0.6));
 }
 
 .logo:hover {

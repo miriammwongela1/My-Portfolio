@@ -30,6 +30,24 @@
   color: #05ec94;
 }
 
+.brandContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.footerLogoImg {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.footerLogoImg:hover {
+  filter: drop-shadow(0 0 8px rgba(5, 236, 148, 0.6));
+}
+
 .brand p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;

@@ -31,7 +31,10 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3>Miriam<span>Dev</span></h3>
+            <div className={styles.brandContent}>
+              <img src="/logo.png" alt="Logo" className={styles.footerLogoImg} />
+              <h3>Miriam<span>Dev</span></h3>
+            </div>
             <p>
               Building modern, scalable solutions with creativity and technical excellence.
             </p>

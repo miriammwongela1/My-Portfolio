@@ -1,0 +1,515 @@
+.section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f2847 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ============ HERO SECTION ============ */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #05ec94, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(5, 236, 148, 0.15);
+  border: 1px solid #05ec94;
+  border-radius: 20px;
+  color: #05ec94;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ============ IMAGE CONTAINER ============ */
+.imageContainer {
+  margin-bottom: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(5, 236, 148, 0.2);
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ============ HIGHLIGHTS ============ */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.highlight {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  background: rgba(5, 236, 148, 0.1);
+  border-color: #05ec94;
+  box-shadow: 0 12px 30px rgba(5, 236, 148, 0.2);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.highlight h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #05ec94;
+}
+
+.highlight p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============ SECTIONS CONTAINER ============ */
+.sectionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.contentSection {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.contentSection:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #05ec94;
+  font-weight: 700;
+}
+
+.sectionDescription {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* ============ LISTS ============ */
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.list li {
+  padding: 15px 20px;
+  background: rgba(5, 236, 148, 0.08);
+  border-left: 3px solid #05ec94;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.list li:hover {
+  background: rgba(5, 236, 148, 0.15);
+  padding-left: 25px;
+}
+
+/* ============ OBJECTIVES GRID ============ */
+.objectivesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.objectiveCard {
+  padding: 30px;
+  background: rgba(5, 236, 148, 0.08);
+  border: 1px solid rgba(5, 236, 148, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.objectiveCard:hover {
+  background: rgba(5, 236, 148, 0.15);
+  border-color: #05ec94;
+  box-shadow: 0 10px 30px rgba(5, 236, 148, 0.15);
+}
+
+.objectiveCard h3 {
+  color: #05ec94;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.objectiveCard p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ============ SCOPE GRID ============ */
+.scopeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.scopeItem {
+  padding: 25px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.scopeItem h4 {
+  color: #00d4ff;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.scopeItem p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+/* ============ REQUIREMENTS TABLE ============ */
+.requirementsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.requirementRow {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  background: rgba(5, 236, 148, 0.08);
+  border: 1px solid rgba(5, 236, 148, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.requirementRow:hover {
+  background: rgba(5, 236, 148, 0.12);
+  border-color: #05ec94;
+}
+
+.requirementNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #05ec94;
+  color: #0a0e27;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.requirementContent h4 {
+  color: #05ec94;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.requirementContent p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============ TECH STACK ============ */
+.techStackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.techCategory {
+  padding: 25px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.techCategory h4 {
+  color: #00d4ff;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.techCategory p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============ CTA SECTION ============ */
+.ctaSection {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(5, 236, 148, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
+  border: 2px solid rgba(5, 236, 148, 0.3);
+  border-radius: 15px;
+  margin-top: 60px;
+}
+
+.ctaSection h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #05ec94;
+}
+
+.ctaSection p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #05ec94 0%, #00d4ff 100%);
+  color: #0a0e27;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(5, 236, 148, 0.3);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #05ec94;
+  border: 2px solid #05ec94;
+}
+
+.btnSecondary:hover {
+  background: #05ec94;
+  color: #0a0e27;
+  transform: translateY(-3px);
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .contentSection {
+    padding: 30px;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .contentSection {
+    padding: 25px;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .highlight {
+    padding: 20px;
+  }
+
+  .objectivesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scopeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .techStackGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 30px 12px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .badges {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .badge {
+    width: 100%;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .contentSection {
+    padding: 20px;
+  }
+
+  .highlights {
+    gap: 15px;
+  }
+
+  .highlight {
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  .highlight h3 {
+    font-size: 1.1rem;
+  }
+
+  .list li {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .requirementRow {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .scopeGrid,
+  .techStackGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaSection {
+    padding: 40px 20px;
+  }
+
+  .ctaSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

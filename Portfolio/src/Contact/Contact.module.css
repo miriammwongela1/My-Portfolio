@@ -1,0 +1,364 @@
+.section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(135deg, #05ec94, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 60px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ============ FORM CONTAINER ============ */
+.formContainer {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #05ec94;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #05ec94;
+  box-shadow: 0 0 0 3px rgba(5, 236, 148, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submitBtn {
+  padding: 14px 28px !important;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ============ INFO CONTAINER ============ */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.infoBox {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.infoBox h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #05ec94;
+}
+
+.infoBox > p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.downloadBtn {
+  display: inline-block;
+  padding: 14px 32px !important;
+  background: linear-gradient(135deg, #05ec94 0%, #00d4ff 100%) !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: 8px;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  text-decoration: none;
+  opacity: 1 !important;
+}
+
+.downloadBtn:hover {
+  box-shadow: 0 10px 30px rgba(5, 236, 148, 0.4);
+  transform: translateY(-2px);
+}
+
+.downloadBtn:active {
+  transform: translateY(0);
+}
+
+/* ============ SOCIAL LINKS ============ */
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #05ec94;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: rgba(5, 236, 148, 0.15);
+  border-color: #05ec94;
+  box-shadow: 0 8px 20px rgba(5, 236, 148, 0.2);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.label {
+  font-size: 0.9rem;
+}
+
+/* ============ CONTACT DETAILS ============ */
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #05ec94;
+}
+
+.detail .label {
+  display: block;
+  font-weight: 600;
+  color: #05ec94;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.detail a,
+.detail p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.detail a {
+  text-decoration: none;
+  color: #05ec94;
+  transition: color 0.3s ease;
+}
+
+.detail a:hover {
+  color: #fff;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .content {
+    gap: 40px;
+  }
+
+  .formContainer,
+  .infoBox {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 20px;
+    min-height: auto;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    margin-bottom: 40px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .formContainer,
+  .infoBox {
+    padding: 25px;
+  }
+
+  .socialLinks {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    gap: 20px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 15px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    gap: 20px;
+  }
+
+  .formContainer,
+  .infoBox {
+    padding: 20px;
+  }
+
+  .infoBox h3 {
+    font-size: 1.4rem;
+  }
+
+  .form {
+    gap: 15px;
+  }
+
+  .formGroup label {
+    font-size: 0.85rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .formGroup textarea {
+    min-height: 120px;
+  }
+
+  .submitBtn {
+    padding: 12px 20px !important;
+  }
+
+  .socialLink {
+    padding: 12px;
+  }
+
+  .icon {
+    font-size: 1.25rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+}

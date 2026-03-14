@@ -1,27 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
-import javaIcon from "../assets/java.png";
-import pythonIcon from "../assets/python.png";
-import jsIcon from "../assets/javascript.png";
-import reactIcon from "../assets/react.png";
-import htmlIcon from "../assets/html.png";
-import cssIcon from "../assets/css.png";
-import sqlIcon from "../assets/database.png";
-import nodeIcon from "../assets/node.png";
-import mongoIcon from "../assets/mdb.svg";
-import gitIcon from "../assets/github.png";
-import vscodeIcon from "../assets/vscode.png";
-import figmaIcon from "../assets/figma.png";
-import canvaIcon from "../assets/canva.webp";
-
-// Certificate images
-import cert1 from "../assets/cert1.JPG";
-import cert2 from "../assets/cert2.JPG";
-import badge1 from "../assets/cert3.JPG";
-import award from "../assets/award.JPG";
-
 import { Link } from "react-router-dom";
+
+// Skill icons from public folder
+const javaIcon = "/Portfolio_Frontend/java.png";
+const pythonIcon = "/Portfolio_Frontend/python.png";
+const jsIcon = "/Portfolio_Frontend/javascript.png";
+const reactIcon = "/Portfolio_Frontend/react.png";
+const htmlIcon = "/Portfolio_Frontend/html.png";
+const cssIcon = "/Portfolio_Frontend/css.png";
+const sqlIcon = "/Portfolio_Frontend/database.png";
+const nodeIcon = "/Portfolio_Frontend/node.png";
+const mongoIcon = "/Portfolio_Frontend/mdb.svg";
+const gitIcon = "/Portfolio_Frontend/github.png";
+const vscodeIcon = "/Portfolio_Frontend/vscode.png";
+const figmaIcon = "/Portfolio_Frontend/figma.png";
+const canvaIcon = "/Portfolio_Frontend/canva.webp";
+
+// Certificate images from public folder
+const cert1 = "/Portfolio_Frontend/cert1.JPG";
+const cert2 = "/Portfolio_Frontend/cert2.JPG";
+const badge1 = "/Portfolio_Frontend/cert3.JPG";
+const award = "/Portfolio_Frontend/award.JPG";
+
+// Project image from public folder
+const swmsImage = "/Portfolio_Frontend/SWMS.png";
+
+// External logos from public folder
+const ciscoLogo = "/Portfolio_Frontend/cisco-logo.jpg"; 
+const icdlBadge = "/Portfolio_Frontend/icdl-badge.png";
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("projects");
@@ -30,20 +38,15 @@ export default function Projects() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.toLowerCase();
-      
-      if (hash.includes("skills")) {
+      if (hash.includes("#skills")) {
         setActiveTab("skills");
-      } else if (hash.includes("certificates")) {
+      } else if (hash.includes("#certificates")) {
         setActiveTab("certificates");
       } else {
         setActiveTab("projects");
       }
     };
-
-    // Check initial hash on mount
     handleHashChange();
-
-    // Listen for hash changes
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
@@ -67,11 +70,12 @@ export default function Projects() {
   const projects = [
     {
       title: "Smart Warehouse Management System",
-      description: "Enterprise-level inventory management system that tracks products in real-time, generates detailed reports, and optimizes warehouse operations. Final year project for managing supermarket inventory with real-time expiry tracking and automated alerts.",
+      description:
+        "Enterprise-level inventory management system with real-time expiry tracking and automated alerts.",
       tech: ["React", "Node.js", "Express", "MongoDB"],
-      image: "/SWMS.png",
+      image: swmsImage,
       demo: "#",
-      details: "/swms"
+      details: "/swms" // ✅ real route
     }
   ];
 
@@ -80,18 +84,18 @@ export default function Projects() {
     { image: cert2, title: "Certificate 2" },
     { image: badge1, title: "Online Badge" },
     { image: award, title: "Award" },
-    { 
+    {
       title: "Introduction to IoT",
       org: "Cisco",
-      bg: "/cisco-logo.jpg",
+      bg: ciscoLogo,
       link: "https://www.credly.com/badges/045baca8-60da-43dc-8328-86ab05c2a3df/public_url",
       issued: "Issued by Cisco",
       type: "badge"
     },
-    { 
-      title: "ICDL Certification", 
+    {
+      title: "ICDL Certification",
       org: "ICDL Global",
-      bg: "/icdl-badge.png",
+      bg: icdlBadge,
       link: "https://profile.icdlafrica.org/dd81d649-9ee4-452f-b97a-9a956a942038#acc.nZBFxPHe",
       issued: "Issued by ICDL Global",
       type: "badge"
@@ -113,12 +117,10 @@ export default function Projects() {
           {["projects", "skills", "certificates"].map((tab) => (
             <motion.button
               key={tab}
-              className={`${styles.tabBtn} ${activeTab === tab ? styles.active : ""}`}
-              onClick={() => {
-                setActiveTab(tab);
-                // Update the URL hash when clicking tab buttons
-                window.location.hash = tab === "projects" ? "#projects" : `#${tab}`;
-              }}
+              className={`${styles.tabBtn} ${
+                activeTab === tab ? styles.active : ""
+              }`}
+              onClick={() => setActiveTab(tab)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -128,15 +130,15 @@ export default function Projects() {
         </div>
 
         {/* Projects Tab */}
-        <motion.div
-          key="projects"
-          variants={tabVariants}
-          initial="hidden"
-          animate={activeTab === "projects" ? "visible" : "hidden"}
-          transition={{ duration: 0.3 }}
-          className={styles.tabContent}
-        >
-          {activeTab === "projects" && (
+        {activeTab === "projects" && (
+          <motion.div
+            key="projects"
+            variants={tabVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.3 }}
+            className={styles.tabContent}
+          >
             <div className={styles.projectsGrid}>
               {projects.map((project, i) => (
                 <motion.div
@@ -150,13 +152,12 @@ export default function Projects() {
                   <div className={styles.projectImage}>
                     <img src={project.image} alt={project.title} />
                     <div className={styles.overlay}>
-
-                      <a
-                      href={project.details} 
-                      className={`${styles.btn} ${styles.btnSecondary}`} 
-                      > 
-                        Details 
-                      </a>
+                      <Link
+                        to={project.details}
+                        className={`${styles.btn} ${styles.btnSecondary}`}
+                      >
+                        Details
+                      </Link>
                     </div>
                   </div>
                   <div className={styles.projectContent}>
@@ -164,27 +165,29 @@ export default function Projects() {
                     <p>{project.description}</p>
                     <div className={styles.techStack}>
                       {project.tech.map((tech, j) => (
-                        <span key={j} className={styles.techBadge}>{tech}</span>
+                        <span key={j} className={styles.techBadge}>
+                          {tech}
+                        </span>
                       ))}
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
-          )}
-        </motion.div>
+          </motion.div>
+        )}
 
         {/* Skills Tab */}
-        <motion.div
-          key="skills"
-          id="skills"
-          variants={tabVariants}
-          initial="hidden"
-          animate={activeTab === "skills" ? "visible" : "hidden"}
-          transition={{ duration: 0.3 }}
-          className={styles.tabContent}
-        >
-          {activeTab === "skills" && (
+        {activeTab === "skills" && (
+          <motion.div
+            key="skills"
+            variants={tabVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.3 }}
+            className={styles.tabContent}
+            id="skills"
+          >
             <div className={styles.skillsGrid}>
               {skillIcons.map((skill, i) => (
                 <motion.div
@@ -201,49 +204,55 @@ export default function Projects() {
                 </motion.div>
               ))}
             </div>
-          )}
-        </motion.div>
+          </motion.div>
+        )}
 
-       {/* Certificates Tab */}
-<motion.div
-  key="certificates"
-  variants={tabVariants}
-  initial="hidden"
-  animate={activeTab === "certificates" ? "visible" : "hidden"}
-  transition={{ duration: 0.3 }}
-  className={styles.tabContent}
->
-  {activeTab === "certificates" && (
-    <div className={styles.certificatesGrid}>
-      {certificates.map((cert, i) => (
-        <motion.div
-          key={i}
-          className={`${styles.certCard} ${cert.type === "badge" ? styles.badge : ""}`}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: i * 0.15 }}
-          whileHover={{ scale: 1.05 }}
-          style={cert.type === "badge" ? { backgroundImage: `url(${cert.bg})` } : {}}
-        >
-          {cert.type === "badge" ? (
-            <a
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.certOverlay}
-            >
-              <h3>{cert.title}</h3>
-              <p>{cert.issued}</p>
-            </a>
-          ) : (
-            <img src={cert.image} alt={cert.title} />
-          )}
-        </motion.div>
-      ))}
-    </div>
-  )}
-</motion.div>
-
+        {/* Certificates Tab */}
+        {activeTab === "certificates" && (
+          <motion.div
+            key="certificates"
+            variants={tabVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.3 }}
+            className={styles.tabContent}
+            id="certificates"
+          >
+            <div className={styles.certificatesGrid}>
+              {certificates.map((cert, i) => (
+                <motion.div
+                  key={i}
+                  className={`${styles.certCard} ${
+                    cert.type === "badge" ? styles.badge : ""
+                  }`}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.15 }}
+                  whileHover={{ scale: 1.05 }}
+                  style={
+                    cert.type === "badge"
+                      ? { backgroundImage: `url(${cert.bg})` }
+                      : {}
+                  }
+                >
+                  {cert.type === "badge" ? (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.certOverlay}
+                    >
+                      <h3>{cert.title}</h3>
+                      <p>{cert.issued}</p>
+                    </a>
+                  ) : (
+                    <img src={cert.image} alt={cert.title} />
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

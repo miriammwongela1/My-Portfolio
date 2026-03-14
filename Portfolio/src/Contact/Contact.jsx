@@ -1,50 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-  e.preventDefault();
-  console.log("Submit button clicked!");
-
-  try {
-    const response = await fetch("http://localhost:5000/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      setSubmitted(true);
-      setTimeout(() => {
-        setFormData({ name: "", email: "", message: "" });
-        setSubmitted(false);
-      }, 3000);
-    } else {
-      alert("Failed to send message");
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
-};
-
-
   const socialLinks = [
     { 
       name: "GitHub", 
@@ -79,64 +36,6 @@ export default function Contact() {
         </motion.div>
 
         <div className={styles.content}>
-          {/* Contact Form */}
-          <motion.div
-            className={styles.formContainer}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.formGroup}>
-                <label htmlFor="name">Full Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your message..."
-                  rows="6"
-                ></textarea>
-              </div>
-
-              <button 
-                type="submit" 
-                className={`${styles.submitBtn} btn btn-primary`}
-                disabled={submitted}
-              >
-                {submitted ? "Message Sent! ✓" : "Send Message"}
-              </button>
-            </form>
-          </motion.div>
-
           {/* Contact Info */}
           <motion.div
             className={styles.infoContainer}
@@ -153,7 +52,7 @@ export default function Contact() {
               </p>
 
               <motion.a
-                href="/Miriam_Mwongela_CV.pdf"
+                href="/Portfolio_Frontend/Miriam_Mwongela_CV.pdf"
                 download="Miriam_Mwongela_CV.pdf"
                 className={`${styles.downloadBtn} btn btn-accent`}
                 whileHover={{ scale: 1.05 }}

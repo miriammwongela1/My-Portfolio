@@ -1,7 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './Header/Header.jsx';
 import About from './About/About.jsx';
-import Skills from './Skills/Skills.jsx';
 import Projects from './Projects/Projects.jsx';
 import Contact from './Contact/Contact.jsx';
 import Footer from './Footer/Footer.jsx';
@@ -22,12 +21,11 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/swms" element={<><Header /><SWMS /><Footer /></>} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/swms" element={<><Header /><SWMS /><Footer /></>} />
+      <Route path="/contact" element={<><Header /><Contact /><Footer /></>} />
+    </Routes>
   );
 }
 

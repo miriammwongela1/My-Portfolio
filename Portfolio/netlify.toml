@@ -1,7 +1,0 @@
-[build]
-  base = "Portfolio"
-  command = "npm install && npm run build"
-  publish = "Portfolio/dist"
-
-[build.environment]
-  NODE_VERSION = "18"

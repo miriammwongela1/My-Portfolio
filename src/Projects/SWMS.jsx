@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import styles from "./SWMS.module.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default function SWMS() {
   const [expandedSection, setExpandedSection] = useState("overview");
@@ -101,7 +102,7 @@ export default function SWMS() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img src="/SWMS.png" alt="Smart Warehouse Management System" />
+          <img src="/Portfolio_Frontend/SWMS.png" alt="Smart Warehouse Management System" />
         </motion.div>
 
         {/* Highlights */}
@@ -298,9 +299,9 @@ export default function SWMS() {
   <Link to="/" className={`${styles.btn} ${styles.btnPrimary}`}>
     ← Back to Projects
   </Link>
-  <Link to="/#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
+  <HashLink smooth to="#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
     Get in Touch →
-  </Link>
+  </HashLink>
 </div>
 
             </div>

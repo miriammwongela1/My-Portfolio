@@ -24,7 +24,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img src="/logo.png" alt="Logo" className={styles.logoImg} />
+            <img src="/Portfolio_Frontend/logo.png" alt="Logo" className={styles.logoImg} />
             <h1 className={styles.logo}>
               Miriam<span>Dev</span>
             </h1>
@@ -45,7 +45,7 @@ export default function Header() {
                 </HashLink>
              ))}
   <a 
-    href="/Miriam_Mwongela_CV.pdf"
+    href="/Portfolio_Frontend/Miriam_Mwongela_CV.pdf"
     download="Miriam_Mwongela_CV.pdf"
     className={styles.cvBtn}
   >
@@ -85,7 +85,7 @@ export default function Header() {
       </HashLink>
     ))}
     <a 
-      href="/Miriam_Mwongela_CV.pdf"
+      href="/Portfolio_Frontend/Miriam_Mwongela_CV.pdf"
       download="Miriam_Mwongela_CV.pdf"
       className={styles.cvBtn}
     >
@@ -109,7 +109,7 @@ export default function Header() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          Hello, I'm <span className={styles.accent}>Miriam Mwongela</span>
+          Hello, I'm <span className={styles.accent}>Miriam Nthenya Mwongela</span>
         </motion.h1>
         
         <motion.p 
@@ -118,7 +118,7 @@ export default function Header() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          Software Developer | Aspiring AI Engineer
+          Software Developer | Aspiring AI Engineer | Data Enthusiast
         </motion.p>
         
         <motion.p 
@@ -137,10 +137,10 @@ export default function Header() {
           transition={{ duration: 1, delay: 1 }}
         >
           
-  <HashLink smooth to="/#projects" className={`${styles.primaryBtn} btn btn-primary`}>
+  <HashLink smooth to="#projects" className={`${styles.primaryBtn} btn btn-primary`}>
     View My Work
   </HashLink>
-  <HashLink smooth to="/#contact" className={`${styles.secondaryBtn} btn btn-secondary`}>
+  <HashLink smooth to="#contact" className={`${styles.secondaryBtn} btn btn-secondary`}>
     Let's Connect
   </HashLink>
 </motion.div>

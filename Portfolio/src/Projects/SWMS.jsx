@@ -102,7 +102,7 @@ export default function SWMS() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img src="/Portfolio/SWMS.png" alt="Smart Warehouse Management System" />
+          <img src="/My-Portfolio/SWMS.png" alt="Smart Warehouse Management System" />
         </motion.div>
 
         {/* Highlights */}

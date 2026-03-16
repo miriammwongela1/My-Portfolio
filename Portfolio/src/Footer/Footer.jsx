@@ -32,7 +32,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className={styles.brandContent}>
-              <img src="/Portfolio/logo.png" alt="Logo" className={styles.footerLogoImg} />
+              <img src="/My-Portfolio/logo.png" alt="Logo" className={styles.footerLogoImg} />
               <h3>Miriam<span>Dev</span></h3>
             </div>
             <p>

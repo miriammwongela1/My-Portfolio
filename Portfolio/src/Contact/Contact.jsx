@@ -52,7 +52,7 @@ export default function Contact() {
               </p>
 
               <motion.a
-                href="/Portfolio/Miriam_Mwongela_CV.pdf"
+                href="/My-Portfolio/Miriam_Mwongela_CV.pdf"
                 download="Miriam_Mwongela_CV.pdf"
                 className={`${styles.downloadBtn} btn btn-accent`}
                 whileHover={{ scale: 1.05 }}

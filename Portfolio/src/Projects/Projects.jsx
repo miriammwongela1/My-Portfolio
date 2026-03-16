@@ -4,32 +4,32 @@ import styles from "./Projects.module.css";
 import { Link } from "react-router-dom";
 
 // Skill icons from public folder
-const javaIcon = "/Portfolio/java.png";
-const pythonIcon = "/Portfolio/python.png";
-const jsIcon = "/Portfolio/javascript.png";
-const reactIcon = "/Portfolio/react.png";
-const htmlIcon = "/Portfolio/html.png";
-const cssIcon = "/Portfolio/css.png";
-const sqlIcon = "/Portfolio/database.png";
-const nodeIcon = "/Portfolio/node.png";
-const mongoIcon = "/Portfolio/mdb.svg";
-const gitIcon = "/Portfolio/github.png";
-const vscodeIcon = "/Portfolio/vscode.png";
-const figmaIcon = "/Portfolio/figma.png";
-const canvaIcon = "/Portfolio/canva.webp";
+const javaIcon = "/My-Portfolio/java.png";
+const pythonIcon = "/My-Portfolio/python.png";
+const jsIcon = "/My-Portfolio/javascript.png";
+const reactIcon = "/My-Portfolio/react.png";
+const htmlIcon = "/My-Portfolio/html.png";
+const cssIcon = "/My-Portfolio/css.png";
+const sqlIcon = "/My-Portfolio/database.png";
+const nodeIcon = "/My-Portfolio/node.png";
+const mongoIcon = "/My-Portfolio/mdb.svg";
+const gitIcon = "/My-Portfolio/github.png";
+const vscodeIcon = "/My-Portfolio/vscode.png";
+const figmaIcon = "/My-Portfolio/figma.png";
+const canvaIcon = "/My-Portfolio/canva.webp";
 
 // Certificate images from public folder
-const cert1 = "/Portfolio/cert1.JPG";
-const cert2 = "/Portfolio/cert2.JPG";
-const badge1 = "/Portfolio/cert3.JPG";
-const award = "/Portfolio/award.JPG";
+const cert1 = "/My-Portfolio/cert1.JPG";
+const cert2 = "/My-Portfolio/cert2.JPG";
+const badge1 = "/My-Portfolio/cert3.JPG";
+const award = "/My-Portfolio/award.JPG";
 
 // Project image from public folder
-const swmsImage = "/Portfolio/SWMS.png";
+const swmsImage = "/My-Portfolio/SWMS.png";
 
 // External logos from public folder
-const ciscoLogo = "/Portfolio/cisco-logo.jpg"; 
-const icdlBadge = "/Portfolio/icdl-badge.png";
+const ciscoLogo = "/My-Portfolio/cisco-logo.jpg"; 
+const icdlBadge = "/My-Portfolio/icdl-badge.png";
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("projects");

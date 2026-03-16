@@ -4,32 +4,32 @@ import styles from "./Projects.module.css";
 import { Link } from "react-router-dom";
 
 // Skill icons from public folder
-const javaIcon = "/Portfolio_Frontend/java.png";
-const pythonIcon = "/Portfolio_Frontend/python.png";
-const jsIcon = "/Portfolio_Frontend/javascript.png";
-const reactIcon = "/Portfolio_Frontend/react.png";
-const htmlIcon = "/Portfolio_Frontend/html.png";
-const cssIcon = "/Portfolio_Frontend/css.png";
-const sqlIcon = "/Portfolio_Frontend/database.png";
-const nodeIcon = "/Portfolio_Frontend/node.png";
-const mongoIcon = "/Portfolio_Frontend/mdb.svg";
-const gitIcon = "/Portfolio_Frontend/github.png";
-const vscodeIcon = "/Portfolio_Frontend/vscode.png";
-const figmaIcon = "/Portfolio_Frontend/figma.png";
-const canvaIcon = "/Portfolio_Frontend/canva.webp";
+const javaIcon = "/Portfolio/java.png";
+const pythonIcon = "/Portfolio/python.png";
+const jsIcon = "/Portfolio/javascript.png";
+const reactIcon = "/Portfolio/react.png";
+const htmlIcon = "/Portfolio/html.png";
+const cssIcon = "/Portfolio/css.png";
+const sqlIcon = "/Portfolio/database.png";
+const nodeIcon = "/Portfolio/node.png";
+const mongoIcon = "/Portfolio/mdb.svg";
+const gitIcon = "/Portfolio/github.png";
+const vscodeIcon = "/Portfolio/vscode.png";
+const figmaIcon = "/Portfolio/figma.png";
+const canvaIcon = "/Portfolio/canva.webp";
 
 // Certificate images from public folder
-const cert1 = "/Portfolio_Frontend/cert1.JPG";
-const cert2 = "/Portfolio_Frontend/cert2.JPG";
-const badge1 = "/Portfolio_Frontend/cert3.JPG";
-const award = "/Portfolio_Frontend/award.JPG";
+const cert1 = "/Portfolio/cert1.JPG";
+const cert2 = "/Portfolio/cert2.JPG";
+const badge1 = "/Portfolio/cert3.JPG";
+const award = "/Portfolio/award.JPG";
 
 // Project image from public folder
-const swmsImage = "/Portfolio_Frontend/SWMS.png";
+const swmsImage = "/Portfolio/SWMS.png";
 
 // External logos from public folder
-const ciscoLogo = "/Portfolio_Frontend/cisco-logo.jpg"; 
-const icdlBadge = "/Portfolio_Frontend/icdl-badge.png";
+const ciscoLogo = "/Portfolio/cisco-logo.jpg"; 
+const icdlBadge = "/Portfolio/icdl-badge.png";
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("projects");

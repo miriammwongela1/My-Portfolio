@@ -24,7 +24,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img src="/Portfolio_Frontend/logo.png" alt="Logo" className={styles.logoImg} />
+            <img src="/Portfolio/logo.png" alt="Logo" className={styles.logoImg} />
             <h1 className={styles.logo}>
               Miriam<span>Dev</span>
             </h1>
@@ -45,7 +45,7 @@ export default function Header() {
                 </HashLink>
              ))}
   <a 
-    href="/Portfolio_Frontend/Miriam_Mwongela_CV.pdf"
+    href="/Portfolio/Miriam_Mwongela_CV.pdf"
     download="Miriam_Mwongela_CV.pdf"
     className={styles.cvBtn}
   >
@@ -85,7 +85,7 @@ export default function Header() {
       </HashLink>
     ))}
     <a 
-      href="/Portfolio_Frontend/Miriam_Mwongela_CV.pdf"
+      href="/Portfolio/Miriam_Mwongela_CV.pdf"
       download="Miriam_Mwongela_CV.pdf"
       className={styles.cvBtn}
     >

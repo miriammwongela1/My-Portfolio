@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./About.module.css";
 
-const profilepic = "/Portfolio_Frontend/1.PNG";
+const profilepic = "/Portfolio/1.PNG";
 
 export default function About() {
   const cardRef = useRef(null);
